@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIMPLE TODO LIST</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
+</head>
+
+<style>
+  body{
+    padding-top:50px;
+  }
+  .wrapper{
+    background-color: #ccc;
+    padding: 2em;
+  }
+
+  
+  ul#tasks{
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+
+  }
+  
+  ul#tasks li.task-item{
+    position: relative;
+    list-style: none;
+    background-color: rgba(255,255,255,.4);
+    align-items: left;
+    border-bottom: 1px dotted #ccc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input[type="checkbox"]{
+    margin-left: 10px;
+  }
+  
+   input[type="checkbox"]:checked{
+    padding: 50px;
+  }
+  
+  ul#tasks li.task-item label{
+   color:#333;
+   padding-top: 10px;
+  }
+  
+  .remove{
+    transition: all .2s ease-out;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    border: 1px solid #999;
+    padding: 5px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .remove:hover{
+    background-color: #fff;
+    transform: scale(.7,.7);
+    top:20%;
+  }
+  
+  p.add{
+    text-align: center;
+    padding: 20px;
+    display:none;
+  }
+  
+</style>
+
+
+
+<body>
+  
+<div class="main">
+  <div class="row">
+    <div class="small-12 medium-6 medium-centered column wrapper">
+      <input type="text" name="task" placeholder="ADD TASK" >
+      <button id="submit" class="button">SUBMIT</button>
+    <div class="row">
+      <div class="small-12 columns">
+      <ul id="tasks">
+         <p class="add">NO TASKS HAVE BEEN ADDED</p>
+          <li class="task-item" data-id="0">
+          <label><input type="checkbox">Wash my vehicle</label>
+         
+        </li>
+          <li class="task-item" data-id="2">
+          <label><input type="checkbox">Job Interview</label>
+         
+        </li>
+        </ul>  
+       
+      </div>
+    </div>
+    </div>
+  
+  
+  </div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/todo.js"></script>
+
+</body>
+</html>
